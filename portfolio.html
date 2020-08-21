@@ -38,11 +38,23 @@
 				</nav>
 
 				<!-- Контактные Данные в шапке, это не нав, потому что не ссылки на секции -->
-				<ul class="contacts-nav">
-					<li class="item icon-envelope">
-						<a href="mailto:info@devstudio.com" class="link one">info@devstudio.com</a>
+				<ul class="contacts-nav list">
+					<li class="item">
+						<a href="mailto:info@devstudio.com" class="link">
+							<svg class="team-icon">
+								<use href="./images/symbol-defs.svg#icon-envelope"></use>
+							</svg>
+							info@devstudio.com</a
+						>
 					</li>
-					<li class="item icon-phone"><a href="tel:+380961111111" class="link two">+38 096 111 11 11</a></li>
+					<li class="item">
+						<a href="tel:+380961111111" class="link"
+							><svg class="team-icon">
+								<use href="./images/symbol-defs.svg#icon-phone"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
 				</ul>
 			</div>
 		</header>
@@ -227,33 +239,37 @@
 		</main>
 
 		<footer class="footbar">
-			<div class="container footer">
-				<a href="./index.html" class="logo" aria-label="main page link"> Web<span class="logo footer">Studio</span> </a>
+			<div class="wrapper">
+				<div class="container footer">
+					<a href="./index.html" class="logo" aria-label="main page link">
+						Web<span class="logo footer">Studio</span>
+					</a>
 
-				<address class="footer-address">
-					<span class="location">
-						г. Киев, пр-т Леси Украинки, 26
-					</span>
+					<address class="footer-address">
+						<span class="location">
+							г. Киев, пр-т Леси Украинки, 26
+						</span>
 
-					<ul>
-						<li class="footer-link"><a href="mailto:info@example.com" class="title">info@example.com</a></li>
+						<ul>
+							<li class="footer-link"><a href="mailto:info@example.com" class="title">info@example.com</a></li>
 
-						<li class="footer-link"><a href="tel:+380961111111" class="title">+38 096 111 11 11</a></li>
-					</ul>
-				</address>
-			</div>
-			<!-- FOOTER JOIN US  -->
-			<section class="join-us">
-				<div class="container footer join-us">
-					<h3 class="join-us title">присоединяйтесь</h3>
-					<ul class="links-list">
-						<li class="item"><a href="./index.html" class="link1"></a></li>
-						<li class="item"><a href="" class="link2"></a></li>
-						<li class="item"><a href="" class="link3"></a></li>
-						<li class="item"><a href="" class="link4"></a></li>
-					</ul>
+							<li class="footer-link"><a href="tel:+380961111111" class="title">+38 096 111 11 11</a></li>
+						</ul>
+					</address>
 				</div>
-			</section>
+				<!-- FOOTER JOIN US  -->
+				<section class="join-us">
+					<div class="container footer join-us">
+						<h3 class="join-us title">присоединяйтесь</h3>
+						<ul class="footer-list links">
+							<li class="item"><a href="./index.html" class="link"></a></li>
+							<li class="item"><a href="" class="link"></a></li>
+							<li class="item"><a href="" class="link"></a></li>
+							<li class="item"><a href="" class="link"></a></li>
+						</ul>
+					</div>
+				</section>
+			</div>
 		</footer>
 	</body>
 </html>
