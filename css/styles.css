@@ -52,6 +52,7 @@ ul {
 	/* background-color: wheat; */
 	/* padding-top: 24px;
 	padding-bottom: 24px; */
+
 	border-bottom: 1px solid var(--header-stroke);
 }
 
@@ -181,20 +182,9 @@ ul {
 	color: var(--accent-color);
 }
 
-.contacts-nav.links::before {
-	/* display: inline-flex; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* margin-bottom: 30px; */
-}
-
 .contacts-nav .item {
 	display: inline-flex;
 	content: "";
-	/* margin-right: 10px; */
-	/* justify-content: center;
-	align-items: center;
-	background-repeat: no-repeat;  */
 }
 
 .div {
@@ -220,26 +210,10 @@ ul {
 
 	width: 10px;
 	height: 16px;
-	background-image: url(../images/smartphone.svg);
+	background-image: url(../images/phone.svg);
 }
 
-/* .contacts-nav .item:nth-child(1)::before {
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 16px;
-	height: 12px;
-	background-image: url(../images/envelope.svg);
-} */
-
-/* .contacts-nav .item:nth-child(2)::before {
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 12px;
-	height: 18px;
-	background-image: url(../images/smartphone.svg);
-} */
-
-/* Hero css */
+/* HERO css */
 
 .hero {
 	margin-left: auto;
@@ -694,7 +668,7 @@ ul {
 	text-decoration: none;
 }
 
-/* Footer */
+/* FOOTER */
 
 .footbar {
 	display: flex;
@@ -708,7 +682,6 @@ ul {
 
 .wrapper {
 	display: flex;
-
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
@@ -827,25 +800,3 @@ ul {
 }
 
 /* Experiments */
-
-.test {
-	display: flex;
-	justify-content: center;
-}
-
-.test:hover {
-	color: var(--accent-color);
-}
-
-.linktest {
-	text-decoration: none;
-	background-image: url(../images/envelope.svg);
-	background-position: center;
-	width: 40px;
-	height: 40px;
-}
-
-.linktest:hover {
-	color: tomato;
-	background-color: yellow;
-}
