@@ -15,7 +15,7 @@
 		<!-- Нормализатор стилей -->
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
 		/>
 
 		<!-- Мои стили -->
@@ -40,11 +40,15 @@
 				</nav>
 
 				<!-- Контактные Данные в шапке, это не нав, потому что не ссылки на секции -->
-				<ul class="contacts-nav">
-					<li class="item icon-envelope">
-						<a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+				<ul class="contacts-nav links">
+					<li class="item">
+					<div class="div envelope"><a href=""></a></div>
+					
+					<a href="mailto:info@devstudio.com" class="link one">info@devstudio.com</a>
 					</li>
-					<li class="item icon-phone"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+					<li class="item">
+						<div class="div phone"><a href=""></a></div>
+						<a href="tel:+380961111111" class="link two">+38 096 111 11 11</a></li>
 				</ul>
 			</div>
 		</header>
@@ -99,7 +103,7 @@
 
 				<div class="container">
 					<h2 class="section-title">Чем мы занимаемся</h2>
-					<ul class="images">
+					<ul class="images-wedo">
 						<li class="item">
 							<img src="./images/code.jpg" alt="Пишем код" width="370" height="294" />
 						</li>
@@ -139,53 +143,53 @@
 				<div class="container">
 					<h2 class="section-title">Наша Команда</h2>
 
-					<ul class="team-listing">
+					<ul class="team-members">
 						<li class="item">
 							<img src="./images/igor.jpg" width="270" height="260" alt="Игорь Демьяненко" />
 							<h3 class="title">Игорь Демьяненко</h3>
-							<p lang="en">Product Designer</p>
+							<p class="text" lang="en">Product Designer</p>
 
 							<ul class="team-list links">
-								<li><a href="./index.html" class="link1"></a></li>
-								<li><a href="" class="link2"></a></li>
-								<li><a href="" class="link3"></a></li>
-								<li><a href="" class="link4"></a></li>
+								<li class="item"><a href="./index.html"  aria-label="инстаграм" class="link1"></a></li>
+								<li class="item"><a href="" class="link2" aria-label="твиттер"></a></li>
+								<li class="item"><a href="" class="link3" aria-label="фейсбук"></a></li>
+								<li class="item"><a href="" class="link4" aria-label="линкед-ин"></a></li>
 							</ul>
 						</li>
 						<li class="item">
 							<img src="./images/olga.jpg" width="270" height="260" alt="Ольга Репина" />
 							<h3 class="title">Ольга Репина</h3>
-							<p lang="en">Frontend Developer</p>
+							<p class="text" lang="en">Frontend Developer</p>
 
 							<ul class="team-list links">
-								<li><a href="./index.html" class="link1"></a></li>
-								<li><a href="" class="link2"></a></li>
-								<li><a href="" class="link3"></a></li>
-								<li><a href="" class="link4"></a></li>
+								<li class="item"><a href="./index.html" class="link1" aria-label="инстаграм"></a></li>
+								<li class="item"><a href="" class="link2" aria-label="твиттер"></a></li>
+								<li class="item"><a href="" class="link3" aria-label="фейсбук"></a></li>
+								<li class="item"><a href="" class="link4" aria-label="линкед-ин"></a></li>
 							</ul>
 						</li>
 						<li class="item">
 							<img src="./images/kolya.jpg" width="270" height="260" alt="Николай Тарасов" />
 							<h3 class="title">Николай Тарасов</h3>
-							<p lang="en">Marketing</p>
+							<p class="text" lang="en">Marketing</p>
 
 							<ul class="team-list links">
-								<li><a href="./index.html" class="link1"></a></li>
-								<li><a href="" class="link2"></a></li>
-								<li><a href="" class="link3"></a></li>
-								<li><a href="" class="link4"></a></li>
+								<li class="item"><a href="./index.html" class="link1" aria-label="инстаграм"></a></li>
+								<li class="item"><a href="" class="link2" aria-label="твиттер"></a></li>
+								<li class="item"><a href="" class="link3" aria-label="фейсбук"></a></li>
+								<li class="item"><a href="" class="link4" aria-label="линкед-ин"></a></li>
 							</ul>
 						</li>
 						<li class="item">
 							<img src="./images/misha.jpg" width="270" height="260" alt="Михаил Ермаков" />
 							<h3 class="title">Михаил Ермаков</h3>
-							<p lang="en">UI Designer</p>
+							<p class="text" lang="en">UI Designer</p>
 
 							<ul class="team-list links">
-								<li><a href="./index.html" class="link1"></a></li>
-								<li><a href="" class="link2"></a></li>
-								<li><a href="" class="link3"></a></li>
-								<li><a href="" class="link4"></a></li>
+								<li class="item"><a href="./index.html" class="link1" aria-label="инстаграм"></a></li>
+								<li class="item"><a href="" class="link2" aria-label="твиттер"></a></li>
+								<li class="item"><a href="" class="link3" aria-label="фейсбук"></a></li>
+								<li class="item"><a href="" class="link4" aria-label="линкед-ин"></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -218,11 +222,55 @@
 					</ul>
 				</div>
 			</section>
+
+<div class="test">
+<a href="" class="linktest">asdasda</a>
+
+
+</div>
+
+
+<svg width="400" height="300" style="outline: 1px solid black;">
+	<rect width="250" height="150" fill="palevioletred" />
+</svg>
+<svg width="400" height="300" style="outline: 1px solid black;">
+	<rect width="250" height="150" fill="palevioletred" />
+</svg>
+<svg width="400" height="300" style="outline: 1px solid black;">
+	<rect width="250" height="150" fill="palevioletred" stroke="black" stroke-width="10" />
+</svg>
+
+<svg width="600" height="400" style="outline: 1px solid black;">
+	<circle r="150" fill="orange" stroke="red" stroke-width="8" />
+</svg>
+
+<svg width="400" height="300" style="outline: 1px solid black">
+	<line x1="20" y1="50" x2="380" y2="50" stroke="black" stroke-width="15" />
+	<line x1="20" y1="80" x2="380" y2="80" stroke="black" stroke-width="15" />
+	<line x1="20" y1="110" x2="380" y2="110" stroke="black" stroke-width="34" />
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ev="http://www.w3.org/2001/xml-events" width="400" height="200" viewBox="0 0 400 200">
+	<circle r="100" cx="50%" cy="50%" fill="red" />
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ev="http://www.w3.org/2001/xml-events" width="400" height="200" viewBox="0 0 200 100">
+	<circle r="50" cx="50%" cy="50%" fill="red" />
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ev="http://www.w3.org/2001/xml-events" width="400" height="200" viewBox="0 0 800 400">
+	<circle r="50" cx="50%" cy="50%" fill="red" />
+</svg>
+
 		</main>
 
 		<!-- Футер -->
 		<!-- Я добавил ариа ссылку, которая используется в иконках-ссылках, когда нет текста, но нужно описание. Текст после ариа ссылки не читается обычно никакой ассистивной программой -->
 		<footer class="footbar">
+<div class="wrapper">
 			<div class="container footer">
 				<a href="./index.html" class="logo" aria-label="main page link"> Web<span class="logo footer">Studio</span> </a>
 
@@ -240,14 +288,17 @@
 			</div>
 			<!-- FOOTER JOIN US  -->
 			<section class="join-us">
-				<h3 class="join-us title">присоединяйтесь</h3>
-				<ul class="links-list">
-					<li class="item"><a href="./index.html" class="link1"></a></li>
-					<li class="item"><a href="" class="link2"></a></li>
-					<li class="item"><a href="" class="link3"></a></li>
-					<li class="item"><a href="" class="link4"></a></li>
-				</ul>
+				<div class="container footer join-us">
+					<h3 class="join-us title">присоединяйтесь</h3>
+					<ul class="links-list">
+						<li class="item"><a href="./index.html" class="link1"></a></li>
+						<li class="item"><a href="" class="link2"></a></li>
+						<li class="item"><a href="" class="link3"></a></li>
+						<li class="item"><a href="" class="link4"></a></li>
+					</ul>
+				</div>
 			</section>
+			</div>
 		</footer>
 	</body>
 </html>

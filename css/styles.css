@@ -43,7 +43,7 @@ ul {
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 1200px;
-	/* outline: 2px solid tomato; */
+	outline: 2px solid tomato;
 }
 
 /* Page header */
@@ -60,7 +60,7 @@ ul {
 .logo {
 	/* display: inline-block; */
 	/* Костыль, так как логотип нижу ссылок странице даже на дизайнерском макете */
-	padding-bottom: 7px;
+	/* padding-bottom: 7px; */
 
 	font-family: "Raleway", sans-serif;
 	color: var(--accent-color);
@@ -156,9 +156,14 @@ ul {
 .contacts-nav {
 	display: flex;
 	margin-left: auto;
+	/* align-items: center; */
 }
 
 .contacts-nav .link {
+	/* display: block; */
+	padding-top: 32px;
+	padding-bottom: 32px;
+
 	color: var(--primary-text-color);
 
 	font-weight: 500;
@@ -169,29 +174,70 @@ ul {
 }
 
 .contacts-nav .link:hover,
-.contacts-nav .item:hover {
+.contacts-nav .item:hover,
+.contacts-nav .link:focus,
+.contacts-nav .item:focus,
+.div:hover {
 	color: var(--accent-color);
 }
 
-.contacts-nav .item::before {
-	display: inline-flex;
-	content: "";
-	height: 12px;
-	width: 18px;
-	margin-right: 10px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	/* background-color: tomato; */
+.contacts-nav.links::before {
+	/* display: inline-flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* margin-bottom: 30px; */
 }
 
-.icon-envelope::before {
+.contacts-nav .item {
+	display: inline-flex;
+	content: "";
+	/* margin-right: 10px; */
+	/* justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;  */
+}
+
+.div {
+	margin-right: 10px;
+}
+
+.envelope {
+	align-self: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	width: 16px;
+	height: 12px;
 	background-image: url(../images/envelope.svg);
 }
 
-.icon-phone::before {
+.phone {
+	align-self: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	width: 10px;
+	height: 16px;
 	background-image: url(../images/smartphone.svg);
 }
+
+/* .contacts-nav .item:nth-child(1)::before {
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 16px;
+	height: 12px;
+	background-image: url(../images/envelope.svg);
+} */
+
+/* .contacts-nav .item:nth-child(2)::before {
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 12px;
+	height: 18px;
+	background-image: url(../images/smartphone.svg);
+} */
 
 /* Hero css */
 
@@ -269,13 +315,24 @@ ul {
 и оттуда назначать каждую иконку .feature-list не пишем,
 а упоминаем .icon-radar  */
 
+.container.icons {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 1200px;
+	height: 251px;
+	margin-bottom: 94px;
+	outline: 2px solid tomato;
+}
+
 .feature-list .item::before {
 	display: block;
 	content: "";
-	height: 70px;
+	height: 120px;
 	margin-bottom: 30px;
 	background-color: var(--button-bcg);
-	background-size: contain;
+	background-size: 70px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -324,10 +381,6 @@ ul {
 
 /* What We Do and Team Headers*/
 
-.section.team {
-	background-color: var(--button-bcg);
-}
-
 .section-title {
 	margin-top: 0px;
 	margin-bottom: 50px;
@@ -340,22 +393,26 @@ ul {
 	text-align: center;
 }
 
-.images {
+.images-wedo {
 	display: flex;
 }
 
-.images .item + .item {
+.images-wedo .item + .item {
 	margin-left: 30px;
 }
 
 /* Section Team*/
+
+.section.team {
+	background-color: var(--button-bcg);
+}
 
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
-.team-listing .item {
+.team-members > .item {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 	background-color: #fff;
@@ -364,7 +421,7 @@ ul {
 	text-align: center;
 }
 
-.team-listing .item + .item {
+.team-members > .item + .item {
 	margin-left: 30px;
 }
 
@@ -376,7 +433,7 @@ ul {
 	margin-bottom: 30px;
 } */
 
-.team-listing .title {
+.team-members .title {
 	padding-top: 30px;
 	margin-top: 0px;
 	margin-bottom: 10px;
@@ -389,55 +446,100 @@ ul {
 	/* outline: 1px solid tomato; */
 }
 
-.team-listing p {
+.team-members .text {
 	margin-top: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 16px;
 
 	font-size: 16px;
 	line-height: 1.19;
-	outline: 1px solid tomato;
+	/* outline: 1px solid tomato; */
 }
 
-.team-listing {
+.team-members {
 	display: flex;
 }
 
 .team-list.links {
-	display: inline-flex;
-	justify-content: space-between;
-	width: 206px;
-
+	display: flex;
+	justify-content: center;
 	align-items: center;
-	outline: 1px solid tomato;
+	margin-bottom: 30px;
 
-	/* height: 44px; */
+	/* width: 206px; */
+
+	/* outline: 1px solid tomato; */
+}
+
+/* .team-list .item {
+	min-height: 44px;
+	padding: 13.88px 12px;
+} */
+
+/* .team-list .link {
+	height: 44px;
+	padding: 13.88px 12px;
+} */
+
+.team-list .item + .item {
+	margin-left: 10px;
+}
+
+/* .team-list .link */
+
+.team-list .item {
+	/* background-color: var(--button-bcg); */
+	display: inline-flex;
+	/* content: "";
+	height: 20px;
+	width: 20px; */
+	/* padding: 12px 12px; */
+	/* outline: 1px solid tomato; */
+
+	/* background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center; */
 }
 
 .team-list .link1 {
-	outline: 1px solid tomato;
-	background-size: contain;
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
-	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/teamlink1.svg);
-}
-.team-list .link2 {
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/teamlink2.svg);
-}
-.team-list .link3 {
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/teamlink3.svg);
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
+	background-image: url(../images/teamlink1.svg);
 }
 
-.team-list .link4 {
-	background-size: contain;
+.team-list.links .link2 {
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
-	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/teamlink4.svg);
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
+	background-image: url(../images/teamlink2.svg);
+}
+.team-list .link3 {
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
+	background-image: url(../images/teamlink3.svg);
+}
+.team-list .link4 {
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
+	background-image: url(../images/teamlink4.svg);
 }
 
 /* OUR CLIENTS*/
@@ -594,24 +696,36 @@ ul {
 
 /* Footer */
 
-.container.footer {
-	max-width: 231px;
-	margin-left: 0px;
-	margin-right: 70px;
-}
-
 .footbar {
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	width: 1200px;
+
+	/* width: 1200px; */
 
 	background-color: var(--footer-color);
 }
 
-.footbar .logo {
+.wrapper {
+	display: flex;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 1200px;
+	outline: 2px solid tomato;
+}
+
+.container.footer {
+	max-width: 250px;
+	margin-left: 0px;
+	margin-right: 70px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.footbar .logo.footer {
 	display: inline-block;
 	margin-bottom: 20px;
 }
@@ -646,44 +760,92 @@ ul {
 
 /* FOOTER JOIN US */
 
+.container.join-us {
+	padding-top: 72px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 206px;
+	height: 80px;
+}
+
 .join-us.title {
 	margin-top: 0px;
+	margin-bottom: 20px;
 	color: var(--white-color);
 	text-transform: uppercase;
 }
 
-.links-list {
+.links-list .item {
 	display: inline-flex;
-	justify-content: space-between;
-	width: 206px;
-	/* height: 44px; */
-	align-items: center;
 }
 
 .links-list .link1 {
-	background-size: contain;
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/footerlink1.svg);
+	background-image: url(../images/footerlink1.svg);
 }
 .links-list .link2 {
-	background-size: contain;
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/footerlink2.svg);
+	background-image: url(../images/footerlink2.svg);
 }
 .links-list .link3 {
-	background-size: contain;
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/footerlink3.svg);
+	background-image: url(../images/footerlink3.svg);
 }
 
 .links-list .link4 {
-	background-size: contain;
+	height: 44px;
+	width: 44px;
+	background-size: 20px;
 	background-repeat: no-repeat;
+	background-position: center;
+	/* background-color: tomato; */
+	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	content: url(../images/footerlink4.svg);
+	background-image: url(../images/footerlink4.svg);
 }
 
 /* Experiments */
+
+.test {
+	display: flex;
+	justify-content: center;
+}
+
+.test:hover {
+	color: var(--accent-color);
+}
+
+.linktest {
+	text-decoration: none;
+	background-image: url(../images/envelope.svg);
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+
+.linktest:hover {
+	color: tomato;
+	background-color: yellow;
+}
