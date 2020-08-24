@@ -68,14 +68,14 @@
 					для вашего бизнеса
 				</h1>
 				<!-- <button type="button">Заказать Услугу</button> -->
-				<a href="" class="btn">Заказать Услугу</a>
+				<a data-modal-open href="" class="btn">Заказать Услугу</a>
 				<!-- <button type="button">Заказать Услугу</button> -->
 			</section>
 
 			<!-- FEATURES НАШИ ПРЕИМУЩЕСТВА  -->
 			<section class="section features">
 				<!-- <div class="container"> -->
-				<h2 class="section-title is-hidden">Наши Преимущества</h2>
+				<h2 class="section-title is-none">Наши Преимущества</h2>
 				<div class="container icons">
 					<ul class="feature-list">
 						<!-- тут можно было бы поставить к item .icon-radar -->
@@ -110,13 +110,35 @@
 					<h2 class="section-title">Чем мы занимаемся</h2>
 					<ul class="images-wedo">
 						<li class="item">
-							<img src="./images/code.jpg" alt="Пишем код" width="370" height="294" />
+							<div class="thumb">
+								<img src="./images/code.jpg" alt="Пишем код" width="370" height="294" class="image" />
+
+								<h3 class="title">десктопные приложения</h3></div
+							>
 						</li>
 						<li class="item">
-							<img src="./images/adapt.jpg" alt="Адаптируем под смартфоны и планшеты" width="370" height="294" />
+							<div class="thumb"
+								><img
+									src="./images/adapt.jpg"
+									alt="Адаптируем под смартфоны и планшеты"
+									width="370"
+									height="294"
+									class="image"
+								/>
+								<h3 class="title">Мобильные приложения</h3></div
+							>
 						</li>
 						<li class="item">
-							<img src="./images/color.jpg" alt="Подбираем цветовое решение" width="370" height="294" />
+							<div class="thumb"
+								><img
+									src="./images/color.jpg"
+									alt="Подбираем цветовое решение"
+									width="370"
+									height="294"
+									class="image"
+								/>
+								<h3 class="title">Дизайнерские решения</h3></div
+							>
 						</li>
 					</ul>
 				</div>
@@ -325,6 +347,16 @@
 					</ul>
 				</div>
 			</section>
+
+			<div class="backdrop is-hidden" data-modal>
+				<div class="modal"
+					><p
+						>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, nobis a alias placeat id doloribus qui?
+						Nesciunt sit velit in perspiciatis libero quisquam.</p
+					>
+					<button data-modal-close>закрыть</button>
+				</div>
+			</div>
 		</main>
 
 		<!-- Футер -->
@@ -362,5 +394,7 @@
 				</section>
 			</div>
 		</footer>
+
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
